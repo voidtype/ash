@@ -1,0 +1,214 @@
+:root {
+  --green: #3FA873;
+  --charcoal: #1E1E1E;
+  --sand: #F5F0E6;
+  --sky: #6DB5C9;
+  --radius: 12px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--charcoal);
+  background: var(--sand);
+}
+
+h1, h2, h3 { font-family: 'Poppins', sans-serif; margin-top: 0; }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav img { 
+  height: 50px; 
+  width: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--charcoal);
+  font-weight: 600;
+}
+
+nav a:hover { color: var(--green); }
+
+.hero {
+  position: relative;
+  height: 55vh;
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  width: 90%;
+  max-width: 900px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius);
+}
+
+.container { 
+  max-width: 960px; 
+  margin: 0 auto; 
+  padding: 2rem 1.5rem;
+}
+
+button, .btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--green);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+button:hover, .btn:hover { 
+  background: #319065;
+  transform: translateY(-1px);
+}
+
+form input, 
+form textarea, 
+form select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, 
+form textarea:focus, 
+form select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(63, 168, 115, 0.2);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  nav a { 
+    margin: 0.5rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+}
+
+/* Accessibility Improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus styles for better keyboard navigation */
+*:focus {
+  outline: 3px solid var(--sky);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  nav, .hero::after, .btn, form {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0.5in;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+}
