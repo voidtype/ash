@@ -1,0 +1,44 @@
+<!--simple file to redirect to /community-connect page-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .redirect-message {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .redirect-message a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .redirect-message a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-message">
+        <p>You are being redirected to the Community Connect Wellbeing page.</p>
+        <p>If you are not redirected automatically, please click <a href="/community-connect">here</a>.</p>
+    </div>
+    <script>
+        //go to the relative path /community-connect even if you have explicityly loaded index.html
+        window.location.href = "/community-connect";
+    </script>
+</body>
+</html>
+<!-- This file serves as a simple redirect to the Community Connect Wellbeing page. -->
+<!-- It includes a message and a link for manual navigation if the redirect does not work. -->
