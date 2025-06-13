@@ -212,3 +212,13 @@ section {
     font-weight: normal;
   }
 }
+
+/* footer - aligned midle and italic */
+footer {
+  text-align: center;
+  font-style: italic;
+  padding: 1rem;
+  background: var(--charcoal);
+  color: white;
+  position: relative;
+}

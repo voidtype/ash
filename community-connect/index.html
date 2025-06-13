@@ -2,129 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Community Connect Wellbeing - Expanding access to community, connection & wellbeing for all.">
   <title>Community Connect Wellbeing | Home</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Small inline snippet to size the big homepage logo -->
+  <style>
+    .home-logo {
+      width: 220px;          /* scales down on mobile via max-width */
+      max-width: 60%;        /* responsive */
+      margin: 1rem auto 2rem;
+      display: block;
+    }
+    @media (min-width: 700px) {
+      .home-logo { width: 300px; }
+    }
+  </style>
 </head>
 <body>
-  <a href="#main-content" class="sr-only">Skip to main content</a>
-  
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Community Connect Wellbeing logo" width="200" height="60">
-      </a>
-      <div class="nav-links">
-        <a href="index.html" class="active" aria-current="page">Home</a>
-        <a href="services.html">Services</a>
-        <a href="retreat.html">Retreat</a>
-        <a href="feedback.html">Feedback</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <button class="mobile-menu-button" aria-expanded="false" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-
-    <div class="hero" style="background-image:url('images/hero-home.png');">
-      <div class="hero-content">
-        <h1>Expanding Access to Community, Connection & Wellbeing</h1>
-        <a href="#main-content" class="btn btn-hero">Learn More</a>
-      </div>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html"><img src="images/logo.png" alt="Community Connect Wellbeing logo"></a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="retreat.html">Retreat</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="contact.html">Contact</a>
     </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" style="background-image:url('images/hero-home.png');">
+    <h1>Expanding Access to<br>Community, Connection & Wellbeing</h1>
   </header>
 
-  <main id="main-content">
-    <div class="container">
-      <section class="fade-in" aria-labelledby="vision-heading">
-        <h2 id="vision-heading">Our Vision & Mission</h2>
-        <p>At Community Connect Wellbeing, we're dedicated to creating an inclusive environment where everyone feels valued and supported. Our vision is a community where personal growth and connection are accessible to all, regardless of ability or background.</p>
-        <p>We exist to nurture personal growth, inclusion, and a genuine sense of belonging for everyone we serve through compassionate support and community engagement.</p>
-      </section>
+  <!-- BIG LOGO FRONT-AND-CENTER -->
+  <img src="images/logo.png"
+       alt="Community Connect Wellbeing"
+       class="home-logo">
 
-      <section class="why-us slide-up" aria-labelledby="why-us-heading">
-        <h2 id="why-us-heading">Why We're Different</h2>
-        <div class="features-grid">
-          <div class="feature">
-            <h3>Person-Centred Approach</h3>
-            <p>Bespoke support tailored to individual needs, never one-size-fits-all. We listen to your unique story and goals.</p>
-          </div>
-          <div class="feature">
-            <h3>Community-Driven</h3>
-            <p>Strong partnerships with local cafés, social groups & skill-building hubs to create meaningful connections.</p>
-          </div>
-          <div class="feature">
-            <h3>Nature-Oriented</h3>
-            <p>Our rural retreat offers true respite and reconnection with nature's healing power.</p>
-          </div>
-        </div>
-        <div class="cta-container">
-          <a href="services.html" class="btn">Explore Our Services</a>
-        </div>
-      </section>
-
-      <section class="testimonial slide-up" aria-label="Testimonial">
-        <blockquote>
-          <p>"Community Connect has transformed my social life. The team's support has helped me build confidence and make lasting friendships."</p>
-          <cite>- Sarah, Participant</cite>
-        </blockquote>
-      </section>
-    </div>
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <h2>Our Vision &amp; Mission</h2>
+    <p>We exist to nurture personal growth, inclusion, and a genuine sense of belonging for everyone we serve.</p>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="images/logo.png" alt="Community Connect Wellbeing" width="180">
-          <p>Nurturing growth, fostering connection, building community.</p>
-        </div>
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="retreat.html">Retreat</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <address>
-            <p>123 Gumtree Lane<br>Greenfield NSW 2400</p>
-            <p>Phone: <a href="tel:0212345678">(02) 1234 5678</a></p>
-            <p>Email: <a href="mailto:hello@communityconnect.com.au">hello@communityconnect.com.au</a></p>
-          </address>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2023 Community Connect Wellbeing. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-            <span class="sr-only">Facebook</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-            <span class="sr-only">Instagram</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
+    Coffee Creative, Shop 1 • 133/137 Mitchell Road, Alexandria NSW 2015
   </footer>
 
   <script src="js/main.js"></script>
